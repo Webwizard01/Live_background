@@ -1,6 +1,6 @@
 *{
     padding: 0;
-    margin: -5px;
+    margin: 0px;
     box-sizing: border-box;
     font-family: Roboto, Arial;
 }
@@ -69,10 +69,20 @@
     color: #000;
 }
 
+video.background-clip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
 @media (min-aspect-ratio:16/9) {
     .background-clip{
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 }
 
