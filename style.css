@@ -1,6 +1,6 @@
 *{
     padding: 0;
-    margin: 0;
+    margin: -5px;
     box-sizing: border-box;
     font-family: Roboto, Arial;
 }
@@ -30,7 +30,8 @@
     text-decoration: none;
     border: 2px solid #fff;
     padding: 15px 25px;
-    border-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
     transition: 0.3s;
 }
 
@@ -44,6 +45,28 @@
     right: 0;
     bottom: 0;
     z-index: -1;
+}
+
+.options {
+    font-size: 23px;
+    text-align: left;
+    width: 175px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 14px 25px;
+    border-radius: 50px;
+    transition: 0.3s;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: 0;
+    background-color: transparent; 
+}
+
+.options:hover,
+.options:focus {
+    background-color: #fff;
+    color: #000;
 }
 
 @media (min-aspect-ratio:16/9) {

@@ -20,22 +20,40 @@
     <title>Document</title>
 </head>
 <body>
-    
     <div class="container">
-
         <video autoplay loop muted plays-inline class="background-clip">
             <source src="images/golden-blossom-moewalls-com.mp4" type="video/mp4">
         </video>
 
         <div class="content">
             <h1>Welcome</h1>
-            <a href="">Start Exploring</a>
+            <a href="#" id="exploreButton">Start Exploring</a>
+            <select class="options" name="links" id="linkSelect" size="1">
+                <option value="">Select</option>
+                <option class="About" value="https://www.linkedin.com/in/menuka-dissanayake-4a5303272/">About me</option>
+                <option value="">Finance</option>
+                <option value="">Projects</option>
+            </select>
         </div>
     </div>
+    
     <footer>
         <div class="copyright">
             &copy; 2023 AiwonderMD. All rights reserved.
         </div>
     </footer>
+
+    <script>
+        const exploreButton = document.getElementById("exploreButton");
+        const linkSelect = document.getElementById("linkSelect");
+
+        exploreButton.addEventListener("click", function() {
+            const selectedValue = linkSelect.value;
+            
+            if (selectedValue) {
+                window.location.href = selectedValue; // Redirect to the selected URL
+            }
+        });
+    </script>
 </body>
 </html>
