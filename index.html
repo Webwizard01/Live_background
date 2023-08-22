@@ -51,9 +51,17 @@
             const selectedValue = linkSelect.value;
             
             if (selectedValue) {
-                window.location.href = selectedValue; // Redirect to the selected URL
+                openLinkInNewTab(selectedValue);
             }
         });
+
+        function openLinkInNewTab(url) {
+            const newTab = window.open(url, "_blank");
+            if (!newTab || newTab.closed || typeof newTab.closed == "undefined") {
+                // Popup blocked or failed to open
+                window.location.href = url; // Fallback to opening in the same tab
+            }
+        }
     </script>
 </body>
 </html>
